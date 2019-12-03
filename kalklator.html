@@ -1,0 +1,180 @@
+
+<head>
+	<title>Kalkulator</title>
+	<style>
+		
+	
+		#kontainer{
+			width:25%;
+			margin:100px auto;
+			background-color:#585959;
+			border-radius:10px;	
+			padding-top:10px;padding-bottom:10px;
+		}
+		#table{
+			width:100%;
+						
+		}
+		#table tr td{
+			padding:8px;
+						
+		}
+		#output{
+			width:100%;
+			height:55px;
+			border-radius:7px;
+			font-size:20pt;
+		}
+		#jumlah{
+			width:100%;
+			height:40px;
+		}
+		button{
+			width:100%;
+			height:40px;
+			background-color:white;
+			color:black;
+			font-size:18px;font-weight:bold;
+			border-radius:8px;
+		}
+		#hapus{
+			width:100%;
+			height:40px;
+			background-color:tomato;
+			color:white;
+		}
+		.oper{
+			width:100%;
+			height:40px;
+			background-color:dodgerblue;
+			color:white;
+		}
+		#jumlah{
+			width:100%;
+			height:40px;
+			background-color:mediumseagreen;
+			color:white;
+		}
+	</style>
+</head>
+<body>
+	<div id="kontainer">
+		<table id="table">
+			<tr>
+				<td colspan="4"><input id="output" disabled id="output" value="0"></td>
+			</tr>
+			<tr>
+				<td><button id="satu" onclick="angka('1')">1</button></td>
+				<td><button id="dua" onclick="angka('2')">2</button></td>
+				<td><button id="tiga" onclick="angka('3')">3</button></td>
+				<td><button class ="oper"id="kali" onclick="opr(1)">*</button></td>
+			</tr>
+			<tr>
+				<td><button id="empat" onclick="angka('4')">4</button></td>
+				<td><button id="lima" onclick="angka('5')">5</button></td>
+				<td><button id="enam" onclick="angka('6')">6</button></td>
+				<td><button class ="oper" id="bagi" onclick="opr(2)">/</button></td>
+			</tr>
+			<tr>
+				<td><button id="tuju" onclick="angka('7')">7</button></td>
+				<td><button id="delapan" onclick="angka('8')">8</button></td>
+				<td><button id="sembilan" onclick="angka('9')">9</button></td>
+				<td><button class ="oper" id="kurang" onclick="opr(3)">-</button></td>
+			</tr>
+			<tr>
+				<td><button id="nol" onclick="angka('0')">0</button></td>
+				<td><button id="koma">.</button></td>
+				<td><button id="hapus" onclick="hapus()">C</button></td>
+				<td><button class ="oper" id="tambah" onclick="opr(4)">+</button></td>
+			</tr>
+			<tr>
+				<td colspan="4"><button id="jumlah" onclick="hitung()">=</button></td>
+			</tr>
+		</table>
+	</div>
+
+	<script>
+		var bil1;
+		var bil2;
+		var hasil;
+		var operator;
+		var opr_seleksi=false;
+
+			function angka(no){
+				var tampil=document.getElementById('output').value;
+				if (tampil=="0") {
+					tampil=no;
+				}else{
+					tampil+=no;
+				}
+
+				document.getElementById('output').value=tampil;
+			}
+
+			function opr(oper){
+				opr_seleksi=true;
+				bil1=parseInt(document.getElementById('output').value);
+				operator=oper;
+
+				document.getElementById('output').value="0";
+			}
+
+			function hitung(){
+				if (opr_seleksi== true) {
+					bil2=parseInt(document.getElementById('output').value);
+
+					switch(operator){
+
+						case 1:
+							hasil=bil1*bil2;
+							document.getElementById('output').value=hasil;
+							break;
+
+						case 2:
+							hasil=bil1+bil2;
+							document.getElementById('output').value=hasil;
+							break;
+
+						case 3:
+							hasil=bil1-bil2;
+							document.getElementById('output').value=hasil;
+							break;
+
+						case 4:
+							hasil=bil1/bil2;
+							document.getElementById('output').value=hasil;
+							break;
+					}
+
+					opr_seleksi=false;
+					bil1=0;
+					bil2=0;
+					hasil=0;
+				}
+			}
+
+			function hapus(){
+				opr_seleksi=false;
+				document.getElementById('output').value="0";
+				bil1=0;
+				bil2=0;
+				hasil=0;
+			}
+	</script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

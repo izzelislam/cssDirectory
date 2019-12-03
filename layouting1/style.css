@@ -1,0 +1,146 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+  height:0;
+  font-size:0;
+  visibility:hidden;
+}
+
+
+*html .clearfix              {zoom:1;} IE6
+*:first-child+html .clearfix {zoom:1 } IE7
+
+body{
+	font-family:sans-serif;
+}
+
+#container{
+	margin:auto;
+	padding:20px;
+}
+
+#navbar{
+	height:100px;
+	background:#ededed;
+	margin-bottom:2%;
+}
+
+#logo{
+	float:left;
+	margin:15px;
+}
+
+#link ul{
+	float:right;
+	margin-top:25px;
+}
+
+#link ul li{
+	float:left;
+	margin:15px;
+}
+
+#link ul li a{
+	text-decoration:none;
+	color:black;
+	font-size:14pt;
+	font-family:sans-serif;
+}
+
+.sidebar{
+	float:left;
+	background:#ededed;
+	width:25%;
+	height:500px;
+}
+
+.main{
+	float:right;
+	width:70%;
+	height:700px;
+	background:#ededed;
+	padding:15px;
+	overflow:auto;
+}
+
+.src, .artikel{
+	margin:2.1em;
+}
+
+h1{
+	display:block;
+	font-size:24pt;
+	margin:0.70em 0;
+	font-weight:bold;	
+}
+
+p{
+	display:block;
+	margin:1em 0;
+	font-size:16pt;
+	text-align:justify;
+}
+
+footer{
+	height:55px;
+	margin-top:2%;
+	background:#b0b0b0;
+}
+
+#footer{
+	padding-top:1.5em;
+	text-align:center;
+	color:white;
+}
+
+
+

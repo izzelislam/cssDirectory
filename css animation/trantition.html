@@ -1,0 +1,31 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>trantion</title>
+	
+	<style>
+		#kotak{
+			width:100px;
+			height:100px;
+			background:black;
+			transform:translatex(0);
+			
+			transition-property       :transform;
+			transition-duration       :1s;
+			transition-timing-function:ease;
+			transition-delay		  :.5s;
+		}
+		
+		#kotak:hover{
+			width:100px;
+			height:100px;
+			transform:translatex(100px);
+		}	
+	</style>
+	
+</head>
+<body>
+	<div id="kotak">
+	</div>
+</body>
+</html>
